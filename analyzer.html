@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Document Analyzer - Legality</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Legality</a>
+            <div class="nav-links">
+                <a href="#" class="nav-button">Log In</a>
+                <a href="#" class="nav-button primary">Contact Sales</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="analyzer-main">
+        <div class="analyzer-header">
+            <h2>Legal Document Analyzer</h2>
+            <p>Upload your legal document or paste text to get comprehensive AI-powered analysis, clause identification, and legal insights.</p>
+        </div>
+
+        <div class="analyzer-tool">
+            <div class="input-panel">
+                <div class="input-tabs">
+                    <button class="tab-btn active" data-tab="text-input">Text Input</button>
+                    <button class="tab-btn" data-tab="pdf-upload">PDF Upload</button>
+                    <button class="tab-btn" data-tab="photo-upload">Photo Upload</button>
+                </div>
+                <div class="input-content">
+                    <textarea id="text-area" placeholder="Paste your legal document text here..."></textarea>
+                    <input type="file" id="file-input" accept=".pdf,image/*" style="display: none;">
+                    <button id="analyze-btn" class="button-primary">Analyze Document</button>
+                </div>
+            </div>
+            
+            <div class="output-panel">
+                <div id="loading-spinner" class="spinner" style="display: none;"></div>
+                <div id="analysis-results">
+                    <div id="summary">
+                        <h3>Summary</h3>
+                        <p class="placeholder">Your document summary will appear here.</p>
+                    </div>
+                    <div id="clauses">
+                        <h3>Key Clauses</h3>
+                        <p class="placeholder">Identified clauses will be listed here.</p>
+                    </div>
+                    <div id="laws">
+                        <h3>Relevant Laws</h3>
+                        <p class="placeholder">Applicable laws will be shown here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Made with love by Pruthavirajsingh Rajput, Gayatri Kale, Kaustubh Palod</p>
+    </footer>
+
+    <!-- Supabase and JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

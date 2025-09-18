@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <header>
+        <nav>
+            <a href="/" class="logo">Document Analazer</a>
+            <div class="nav-links">
+                <a href="#" class="nav-button">Log In</a>
+                <a href="#" class="nav-button primary">Request a Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="analyzer-main">
+        <div class="analyzer-header">
+            <h1>Clarity in Every Clause.</h1>
+            <p>Paste your text or upload a document. Our AI provides instant, easy-to-understand analysis.</p>
+        </div>
+
+        <div class="analyzer-tool">
+            <div class="input-panel">
+                <div class="input-tabs">
+                    <button class="tab-btn active" data-tab="text-input">Text Input</button>
+                    <button class="tab-btn" data-tab="pdf-upload">Upload File</button>
+                </div>
+                <div class="input-container">
+                    <textarea id="text-area" placeholder="Paste your contract clause, service agreement, or any legal text here..."></textarea>
+                    <div id="file-upload-placeholder" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l-3.75 3.75M12 9.75l3.75 3.75M3 14.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18v-3.75" />
+                        </svg>
+                        <p><span>Click to upload</span> or drag and drop</p>
+                        <small>PDF, PNG, JPG supported</small>
+                        <input type="file" id="file-input" accept=".pdf,image/*" style="display: none;">
+                    </div>
+                </div>
+                <button id="analyze-btn" class="button-primary">Analyze Document</button>
+            </div>
+            
+            <div class="output-panel">
+                <div id="loading-spinner" style="display: none;"></div>
+                <div id="analysis-results">
+                    <div id="summary">
+                        <h3>Summary</h3>
+                        <p class="placeholder">Your document summary will appear here.</p>
+                    </div>
+                    <div id="clauses">
+                        <h3>Key Clauses</h3>
+                        <p class="placeholder">Identified clauses will be listed here.</p>
+                    </div>
+                    <div id="laws">
+                        <h3>Relevant Laws</h3>
+                        <p class="placeholder">Applicable laws will be shown here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Made with ❤️ by Pruthavirajsingh Rajput, Gayatri Kale, Kaustubh Palod</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
